@@ -9,7 +9,7 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
 {
     public class SauceDemoCartPage : BasePage
     {
-
+        //gittest
         #region Buttons
         IWebElement _continueShoppingButton => Driver.FindElement(By.Id("continue-shopping"));
         IWebElement _checkoutButton => Driver.FindElement(By.Id("checkout"));
