@@ -16,5 +16,9 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
             
         }
        
+        public void ClickFinishButton()
+        {
+            _finishButton.Click();
+        }
     }
 }

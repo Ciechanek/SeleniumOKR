@@ -39,12 +39,12 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
         }
         public void EnterLastName(string lastName)
         {
-            _firstNameInput.SendKeys(lastName);
+            _lastNameInput.SendKeys(lastName);
         }
 
         public void EnterPostalCode(string postalCode)
         {
-            _firstNameInput.SendKeys(postalCode);
+            _postalCodeInput.SendKeys(postalCode);
         }
     }
 }
