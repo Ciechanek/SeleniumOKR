@@ -15,7 +15,6 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
         {
             
         }
-
-        
+       
     }
 }
