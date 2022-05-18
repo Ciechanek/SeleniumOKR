@@ -15,10 +15,15 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
         {
             
         }
-       
+        
         public void ClickFinishButton()
         {
             _finishButton.Click();
+        }
+
+        public void ClickCancelButton()
+        {
+            _cancelButton.Click();
         }
     }
 }

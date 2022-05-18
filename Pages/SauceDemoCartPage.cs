@@ -9,7 +9,6 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
 {
     public class SauceDemoCartPage : BasePage
     {
-        //gittest
         #region Buttons
         IWebElement _continueShoppingButton => Driver.FindElement(By.Id("continue-shopping"));
         IWebElement _checkoutButton => Driver.FindElement(By.Id("checkout"));
@@ -40,13 +39,13 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
         }
         public double GetSumOfProductsInCart()
         {
-            double sum = 0;
+            double entireOrderPrice = 0;
             for (int i = 0; i < _prices.Count; i++)
             {
                 pricesArray[i] = _prices.ToList()[i].Text.ToString().Remove(1, 1);
-                sum += double.Parse(pricesArray[i]);
+                entireOrderPrice += double.Parse(pricesArray[i]);
             }
-            return sum;
+            return entireOrderPrice;
         }
         #endregion
     }

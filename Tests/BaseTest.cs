@@ -8,7 +8,6 @@ namespace SeleniumAppCiechanMateuszOKR.Tests
     public class BaseTest
     {
         public IWebDriver Driver;
-        
 
         [SetUp]
         public void LaunchChromeDriver()
@@ -21,12 +20,6 @@ namespace SeleniumAppCiechanMateuszOKR.Tests
         public void CloseChromeDriver()
         {
             Driver.Quit();
-        }
-
-        [OneTimeTearDown]
-        public void CloseFile()
-        {
-           
         }
     }
 }
