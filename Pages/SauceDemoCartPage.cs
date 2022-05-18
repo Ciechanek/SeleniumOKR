@@ -17,6 +17,7 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
         ICollection<IWebElement> _prices => Driver.FindElements(By.XPath("//div[@class='inventory_item_price']"));
         #endregion
         string[] pricesArray;
+        double orderValue;
 
         public SauceDemoCartPage(IWebDriver driver) : base (driver)
         {
@@ -37,15 +38,15 @@ namespace SeleniumAppCiechanMateuszOKR.Pages
             _removeButtons.ToList()[itemNr].Click();
             //_removeButtons2[itemNr].Click();
         }
-        public double GetSumOfProductsInCart()
+        public double GetSumOfProductsValueInCart()
         {
-            double entireOrderPrice = 0;
+            orderValue = 0;
             for (int i = 0; i < _prices.Count; i++)
             {
                 pricesArray[i] = _prices.ToList()[i].Text.ToString().Remove(1, 1);
-                entireOrderPrice += double.Parse(pricesArray[i]);
+                orderValue += double.Parse(pricesArray[i]);
             }
-            return entireOrderPrice;
+            return orderValue;
         }
         #endregion
     }

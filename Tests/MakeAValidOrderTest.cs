@@ -17,8 +17,7 @@ namespace SeleniumAppCiechanMateuszOKR.Tests
         [Test]
         public void ValidOrderTest()
         {
-            SauceDemoMainPage.EnterLogin("standard_user");
-            SauceDemoMainPage.EnterPassword("secret_sauce");
+            EnterCredentialsSteps.EnterValidCredentials();
             SauceDemoMainPage.ClickLogin();
             SauceDemoInventoryPage.ClickBackpackAddToCart();
             SauceDemoInventoryPage.ClickLightAddToCart();
